@@ -3,6 +3,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 :root{
@@ -13,16 +14,17 @@
     --box-shadow: 10px 13px 13px rgba(0, 0, 0, 0.3);
 }
 .nav{
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100% !important;
     background: var(--pink);
-    padding: 32px 40px 33px 40px;
-    height: 10px;
+    display: flex;
+    place-items: center;
+    gap: 150px;
+    padding: 20px 40px;
     position: fixed;
     z-index: 1;
+    border-radius: 0 0 0px 20px;
 }
+
 h1{
     font-size: 32px;
     color: var(--black);
@@ -32,10 +34,11 @@ h1{
 }
 .menuitems ul{
     display: flex;
+    margin-left: 20%;
 }
 .icon{
     color: var(--black);
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .active{
     color: var(--black);
@@ -43,7 +46,7 @@ h1{
 }
 .searchbar{
     height: 30px;
-    margin-left: 200px;
+    position: relative;
 }
 .searchbar input{
     border-radius: 30px;
@@ -52,8 +55,14 @@ h1{
     border: none;
     color: var(--black);
 }
-.searchbar input:active{
-    border: none;
+.search{
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    cursor: pointer;
+}
+.hero-section{
+    height: 100vh;
 }
 .hero-section .image {
     width: 100%;
@@ -61,7 +70,8 @@ h1{
     overflow: hidden;
 }
 .hero-section .image img{
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
 }
 .tagline {
     position: absolute;
@@ -71,7 +81,12 @@ h1{
 .tagline h2{
     font-size: 64px;
     width: 438px;
-    
+    color: var(--white);
+}
+.tagline p{
+    margin-top: 10px;
+    font-size: 50px;
+    color: var(--white);
 }
 .tagline button{
     margin-top: 100px;
@@ -84,7 +99,11 @@ h1{
     border-radius: 20px 0;
     cursor: pointer;
     box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    transition: all ease 0.2s;
+}
+.tagline button:hover{
+    background: var(--black);
+    color: var(--white);
 }
 .category-section{
     padding: 0 50px;
@@ -124,6 +143,7 @@ h1{
     height: 25%;
     font-size: 40px;
     display: flex;
+    text-align: center;
     justify-content: center;
     place-items: center;
     transition: var(--transition);
@@ -143,16 +163,18 @@ h1{
 }
 .see-more{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .see-more a{
     color: var(--black);
+    font-size: 25px;
 }
 .see-more a:hover{
     text-decoration: underline;
 }
 .testimonial-section{
-    padding: 0 50px;
+    padding: 50px 50px;
+    background: var(--white);
 }
 .sec-set2{
     display: flex;
@@ -161,12 +183,13 @@ h1{
     justify-content: center;
 }
 .aboutus-section{
+    background: var(--white);
     height: 100vh;
     margin-top: 100px;
     position: relative;
     text-align: center;
     overflow: hidden;
-    padding: 0 50px;
+    padding: 0 40px;
 }
 .bg{
     width: 100%;
@@ -200,10 +223,75 @@ h1{
     border-radius: 50%;
     position: relative;
     left: 90px;
+    box-shadow: var(--box-shadow);
 }
 .testimony .image img{
     width: 264px;
     height: 399px;
     position: absolute;
     left: 0px;
+}
+.footer{
+    text-align: center;
+    height: 200px;
+    background: var(--pink);
+    padding: 30px 100px;
+    position: relative;
+}
+.footer1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer__copyright{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 90%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.note1{
+    height: 200px;
+}
+h4{
+    font-size: 17px;
+}
+.footer1 p{
+    font-size: 17px;
+    margin-top: 10px;
+}
+.note2{
+    display: flex;
+    flex-direction: column;
+}
+.footer a{
+    margin-top: 10px;
+    color: var(--black);
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.note3 {
+    display: flex;
+    flex-direction: column;
+}
+.note3 a{
+    margin-top: 10px;
+    color: var(--black);
+}
+
+@media  (max-width: 430px) {
+    body{
+        width: 100%;
+    }
+    .menuitems{
+        display: none;
+    }
+    .searchbar{
+        display: none;
+    }
+    .nav{
+        width: 100% !important;
+        justify-content: center;
+    }
 }
