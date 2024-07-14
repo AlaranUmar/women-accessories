@@ -1,0 +1,157 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --pink: #FADADD;
+    --white: #ffff;
+    --black: #000000;
+}
+.nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--pink);
+    padding: 32px 40px 33px 40px;
+    height: 10px;
+    position: fixed;
+    z-index: 1;
+}
+h1{
+    font-size: 32px;
+    color: var(--white);
+}
+.menuitems ul{
+    display: flex;
+}
+.icon{
+    color: var(--black);
+    margin-left: 50px;
+}
+.searchbar{
+    height: 30px;
+    margin-left: 200px;
+}
+.searchbar input{
+    border-radius: 30px;
+    width: 310px;
+    padding: 10px 21px 11px;
+    border: none;
+    color: var(--pink);
+}
+
+.hero-section .image {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero-section .image img{
+    width: 100%;
+}
+.tagline {
+    position: absolute;
+    top: 195px;
+    margin-left: 40px;
+}
+.tagline h2{
+    font-size: 64px;
+    width: 438px;
+    
+}
+.tagline button{
+    margin-top: 100px;
+    border: none;
+    width: 200px;
+    padding: 20px 10px;
+    background: var(--pink);
+    color: var(--white);
+    font-size: 30px;
+    border-radius: 20px 0;
+    cursor: pointer;
+}
+.category-section{
+    padding: 0 50px;
+}
+.sec-title{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 80px;
+}
+.sec-set {
+    display: flex;
+    justify-content: space-between;
+}
+.ctg{
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.ctg:hover ~ .ctg:last-child{
+    display: flex;
+    z-index: 0.5;
+}
+.ctg img{
+    height: 100%;
+    width: 100%;
+}
+.img-text{
+    /* display: none; */
+    position: absolute;
+    background: red;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+.img-text p{
+    top: 50%;
+}
+.see-more{
+    text-align: center;
+    margin-top: 10px;
+}
+.see-more a{
+    color: var(--black);
+}
+.see-more a:hover{
+    text-decoration: underline;
+}
+.testimonial-section{
+    padding: 0 50px;
+}
+.sec-set2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.testimony{
+    width: 427px;
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+.testimony .image{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    left: 90px;
+}
+.testimony .image img{
+    width: 264px;
+    height: 399px;
+    position: absolute;
+    left: 0px;
+}
