@@ -93,8 +93,8 @@ h1{
     overflow: hidden;
     position: relative;
 }
-.ctg:hover ~ .ctg:last-child{
-    display: flex;
+.ctg:hover .img-text{
+    /* display: flex; */
     z-index: 0.5;
 }
 .ctg img{
@@ -102,7 +102,8 @@ h1{
     width: 100%;
 }
 .img-text{
-    /* display: none; */
+    display: grid;
+    place-items: center;
     position: absolute;
     background: red;
     bottom: 0;
