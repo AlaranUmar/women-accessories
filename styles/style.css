@@ -9,6 +9,8 @@
     --pink: #FADADD;
     --white: #ffff;
     --black: #000000;
+    --transition: all 400ms ease;
+    --box-shadow: 10px 13px 13px rgba(0, 0, 0, 0.3);
 }
 .nav{
     width: 100vw;
@@ -23,7 +25,10 @@
 }
 h1{
     font-size: 32px;
-    color: var(--white);
+    color: var(--black);
+    border: 3px var(--black) solid;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 .menuitems ul{
     display: flex;
@@ -31,6 +36,10 @@ h1{
 .icon{
     color: var(--black);
     margin-left: 50px;
+}
+.active{
+    color: var(--black);
+    border-bottom: solid var(--black) 3px;
 }
 .searchbar{
     height: 30px;
@@ -41,9 +50,11 @@ h1{
     width: 310px;
     padding: 10px 21px 11px;
     border: none;
-    color: var(--pink);
+    color: var(--black);
 }
-
+.searchbar input:active{
+    border: none;
+}
 .hero-section .image {
     width: 100%;
     height: 100vh;
@@ -67,11 +78,13 @@ h1{
     border: none;
     width: 200px;
     padding: 20px 10px;
-    background: var(--pink);
-    color: var(--white);
+    background: var(--white);
+    color: var(--black);
     font-size: 30px;
     border-radius: 20px 0;
     cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
 .category-section{
     padding: 0 50px;
@@ -84,35 +97,49 @@ h1{
 }
 .sec-set {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .ctg{
+    margin-top: 30px;
     width: 350px;
     height: 350px;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    box-shadow: 10px 13px 13px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.ctg:hover img {
+    height: 105%;
+    width: 105%;
+}
+.ctg .img-text{
+    position: absolute;
+    background: var(--pink);
+    bottom: 0;
+    transform-origin: bottom;
+    transform: translateY(100%);
+    width: 100%;
+    height: 25%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    transition: var(--transition);
 }
 .ctg:hover .img-text{
-    /* display: flex; */
-    z-index: 0.5;
+    transform: translateY(0);
 }
+
 .ctg img{
     height: 100%;
     width: 100%;
-}
-.img-text{
-    display: grid;
-    place-items: center;
-    position: absolute;
-    background: red;
-    bottom: 0;
-    width: 100%;
-    height: 30%;
-    text-align: center;
+    transition: var(--transition);
 }
 .img-text p{
     top: 50%;
+    color: var(--black);
 }
 .see-more{
     text-align: center;
@@ -132,6 +159,30 @@ h1{
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
+}
+.aboutus-section{
+    height: 100vh;
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 50px;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    right: 10px;
+    display: flex;
+    gap: 50px;
+}
+.bg img{
+    width: 800px;
+    border-radius: 20px;
+}
+.bg p{
+    font-size: 30px;
+    text-align: left;
 }
 .testimony{
     width: 427px;
