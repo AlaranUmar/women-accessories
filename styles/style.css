@@ -13,7 +13,8 @@
     --box-shadow: 10px 13px 13px rgba(0, 0, 0, 0.3);
 }
 .nav{
-    width: 100% !important;
+    top: 0;
+    width: 100%;
     background: var(--pink);
     display: flex;
     place-items: center;
@@ -46,10 +47,11 @@ h1{
 .searchbar{
     height: 30px;
     position: relative;
+    width: 25%;
 }
 .searchbar input{
     border-radius: 30px;
-    width: 310px;
+    width: 100%;
     padding: 10px 21px 11px;
     border: none;
     color: var(--black);
@@ -65,24 +67,23 @@ h1{
 }
 .hero-section .image {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 .hero-section .image img{
-    /* width: 100%; */
-    height: 100%;
+    width: 100%;
 }
 .tagline {
     position: absolute;
     top: 195px;
-    margin-left: 40px;
+    padding-left: 40px;
 }
 .tagline h2{
     font-size: 64px;
-    width: 438px;
+    width: 500px;
     color: var(--white);
 }
-.tagline p{
+.tagline h3{
     margin-top: 10px;
     font-size: 50px;
     color: var(--white);
@@ -90,7 +91,7 @@ h1{
 .tagline button{
     margin-top: 100px;
     border: none;
-    width: 200px;
+    width: 40%;
     padding: 20px 10px;
     background: var(--white);
     color: var(--black);
@@ -199,7 +200,7 @@ h1{
     gap: 50px;
 }
 .bg img{
-    width: 800px;
+    width: 60%;
     border-radius: 20px;
 }
 .bg p{
@@ -207,13 +208,13 @@ h1{
     text-align: left;
 }
 .testimony{
-    width: 427px;
-    height: 368px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 .testimony .image{
     width: 250px;
@@ -221,7 +222,6 @@ h1{
     overflow: hidden;
     border-radius: 50%;
     position: relative;
-    left: 90px;
     box-shadow: var(--box-shadow);
 }
 .testimony .image img{
@@ -232,20 +232,16 @@ h1{
 }
 .footer{
     text-align: center;
-    height: 200px;
+    height: 20%;
     background: var(--pink);
     padding: 30px 100px;
-    position: relative;
 }
 .footer1{
     display: flex;
     justify-content: space-evenly;
 }
 .footer__copyright{
-    position: absolute;
-    bottom: 0;
     text-align: center;
-    width: 90%;
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -287,23 +283,182 @@ h4{
         display: none;
     }
     .nav{
-        width: 100%;
+        padding: 12.5px 25px;
         justify-content: center;
     }
     .tagline{
+        padding-left: 25px;
         margin-left: 0;
-        width: 425px;
+        width: 100%;
+        top: 120px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .tagline h2{
+        font-size: 35px;
+        width: 274px;
+        line-height: 30px;
+    }
+    .tagline h3{
+        font-size: 25px;
     }
     .footer{
-        padding: 0;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer1{
+        display: flex;
+        flex-direction: column;
     }
     .footer1 p{
         font-size: 12px;
+        margin-top: 6px;
+    }
+    .note1{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .note2{
+        margin-bottom: 20px;
+    }
+    .note3{
+        margin-bottom: 20px;
+    }
+    .note4{
+        margin-bottom: 20px;
     }
     h4{
         font-size: 12px;
     }
     .footer a{
         font-size: 12px;
+    }
+    .footer__copyright{
+        font-size: 10px;
+    }
+    .tagline button{
+        margin-top: 40px;
+        padding: 12.5px 6.25px;
+        font-size: 18.75px;
+        border-radius: 12.5px;
+    }
+    .hero-section{
+        height: 62.5vh;
+    }
+    .category-section{
+        padding: 0 31.25px;
+    }
+    .sec-title{
+        margin-top: 62.5px;
+        margin-bottom: 50px;
+    }
+    .ctg{
+        width: 218.8px;
+        height: 218.8px;
+    }
+    .ctg .img-text{
+        font-size: 25px;
+    }
+    .see-more{
+        margin-top: 18.75px;
+    }
+    .aboutus-section{
+        margin-top: 62.5px;
+        padding: 0 25px;
+    }
+    .sec-set{
+        justify-content: center;
+    }
+    .bg{
+        flex-direction: column;
+        align-items: center;
+        gap: 31.25px;
+    }
+    .bg p{
+        font-size: 12px;
+        text-align: center;
+    }
+    .testimonial-section{
+        padding: 30px 30px;
+    }
+    .sec-set2{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+    .testimony{
+        gap: 12.5px;
+        align-items: center;
+    }
+    .note{
+        font-size: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .nav{
+        gap: 0;
+        justify-content: space-between;
+    }
+    ul{
+        margin-left: 0;
+    }
+    .hero-section{
+        height: 80vh;
+    }
+    .sec-set{
+        justify-content: space-between;
+    }
+    .ctg{
+        width: 200px;
+        height: 200px;
+    }
+    .aboutus-section{
+        height: 60vh;
+        margin-top: 0;
+    }
+    .sec-title{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .bg{
+        gap: 20px;
+    }
+    .bg p{
+        font-size: 23.5px;
+    }
+    .footer{
+        padding: 10px 35px;
+    }
+}
+/* @media (max-width: 1440px) {
+    .hero-section{
+        height: 80vh;
+    }
+    .tagline{
+        top: 400px;
+    }
+    .aboutus-section{
+        height: 50vh;
+    }
+    .bg p{
+        font-size: 30px;
+    }
+} */
+@media (max-width: 1024px) {
+    .tagline{
+        top: 300px;
+    }
+    .nav{
+        gap: 80px;
+    }
+    .sec-set{
+        justify-content: space-evenly;
+    }
+    .bg p{
+        font-size: 23px;
     }
 }
