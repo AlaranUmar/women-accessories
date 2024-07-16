@@ -5,3 +5,35 @@
     width: 300px;
     height: 300px;
 }
+.jewelries{
+    margin-top: 40px;
+    height: 70vh;
+    padding: 10px 150px;
+}
+h1{
+    border: none;
+}
+.necklace{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.product{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.product-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--pink);
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jewelries-set{
+    display: flex;
+    justify-content: space-between;
+}

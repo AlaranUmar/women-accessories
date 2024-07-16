@@ -184,8 +184,8 @@ h1{
 }
 .aboutus-section{
     background: var(--white);
-    height: 100vh;
-    margin-top: 100px;
+    height: auto;
+    margin-top: 50px;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -193,19 +193,16 @@ h1{
 }
 .bg{
     width: 100%;
-    height: 100%;
+    height: 200px;
     overflow: hidden;
     right: 10px;
     display: flex;
     gap: 50px;
 }
-.bg img{
-    width: 60%;
-    border-radius: 20px;
-}
 .bg p{
     font-size: 30px;
-    text-align: left;
+    text-align: center;
+    height: 100%;
 }
 .testimony{
     width: 40%;
@@ -275,6 +272,78 @@ h4{
     color: var(--black);
 }
 
+/* @media (max-width: 1440px) {
+    .hero-section{
+        height: 80vh;
+    }
+    .tagline{
+        top: 400px;
+    }
+    .aboutus-section{
+        height: 100vh;
+    }
+    .bg p{
+        font-size: 30px;
+    }
+} */
+@media (max-width: 1024px) {
+    .tagline{
+        top: 300px;
+    }
+    .nav{
+        gap: 80px;
+    }
+    .sec-set{
+        justify-content: space-evenly;
+    }
+    .bg p{
+        font-size: 23px;
+    }
+}
+@media (max-width: 768px) {
+    .nav{
+        gap: 0;
+        justify-content: space-between;
+    }
+    .menuitems ul{
+        margin-left: 0;
+    }
+    .hero-section{
+        height: 60vh;
+    }
+    .sec-set{
+        justify-content: space-between;
+    }
+    .ctg{
+        width: 300px;
+        height: 300px;
+    }
+    .tagline {
+        top: 160px;
+    }
+    .tagline button{
+        margin-top: 20px;
+    }
+    .aboutus-section{
+        height: 60vh;
+        margin-top: 0;
+    }
+    .sec-title{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .bg{
+        gap: 20px;
+        /* justify-content: space-evenly; */
+    }
+    .bg p{
+        font-size: 23px;
+        width: 50%;
+    }
+    .footer{
+        padding: 10px 35px;
+    }
+}
 @media  (max-width: 430px) {
     .menuitems{
         display: none;
@@ -307,7 +376,7 @@ h4{
         padding: 10px 0;
         display: flex;
         flex-direction: column;
-        height: auto;
+        height: 90vh;
     }
     .footer1{
         display: flex;
@@ -346,7 +415,7 @@ h4{
         border-radius: 12.5px;
     }
     .hero-section{
-        height: 62.5vh;
+        height: 50vh;
     }
     .category-section{
         padding: 0 31.25px;
@@ -378,7 +447,7 @@ h4{
         gap: 31.25px;
     }
     .bg p{
-        font-size: 12px;
+        font-size: 16px;
         text-align: center;
     }
     .testimonial-section{
@@ -398,67 +467,5 @@ h4{
         font-size: 10px;
     }
 }
-@media (max-width: 768px) {
-    .nav{
-        gap: 0;
-        justify-content: space-between;
-    }
-    ul{
-        margin-left: 0;
-    }
-    .hero-section{
-        height: 80vh;
-    }
-    .sec-set{
-        justify-content: space-between;
-    }
-    .ctg{
-        width: 200px;
-        height: 200px;
-    }
-    .aboutus-section{
-        height: 60vh;
-        margin-top: 0;
-    }
-    .sec-title{
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    .bg{
-        gap: 20px;
-    }
-    .bg p{
-        font-size: 23.5px;
-    }
-    .footer{
-        padding: 10px 35px;
-    }
-}
-/* @media (max-width: 1440px) {
-    .hero-section{
-        height: 80vh;
-    }
-    .tagline{
-        top: 400px;
-    }
-    .aboutus-section{
-        height: 50vh;
-    }
-    .bg p{
-        font-size: 30px;
-    }
-} */
-@media (max-width: 1024px) {
-    .tagline{
-        top: 300px;
-    }
-    .nav{
-        gap: 80px;
-    }
-    .sec-set{
-        justify-content: space-evenly;
-    }
-    .bg p{
-        font-size: 23px;
-    }
-}
+
+
